@@ -71,17 +71,24 @@ colorTheme.addEventListener("click", () => {
  document.body.style.backgroundColor="orange";
 })
 
-//8. Pressing any key replaces spiders with explosions. (NOT WORKING)
+//8. Pasting Text will create explosions.
 const spiderSquish = document.querySelectorAll("p");
 spiderSquish.forEach(element => {
-    if (element.textContent === '🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️') {
-        window.addEventListener('keydown', () => {
-        element.textContent = "fart";
-        document.body.style.backgroundColor="orange";
-        console.log(element.textContent);
-        })
-    }
+    element.addEventListener("paste", () => {
+        element.textContent = "💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥";
+    })
 })
+
+// const spiderSquish = document.querySelectorAll("p");
+// spiderSquish.forEach(element => {
+//     if (element.textContent === '🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️🕷️') {
+//         window.addEventListener('keydown', () => {
+//         element.textContent = "fart";
+//         document.body.style.backgroundColor="orange";
+//         console.log(element.textContent);
+//         })
+//     }
+// })
 
 //9. A user tries to drag an image
 const dragImg = document.querySelectorAll("img");
@@ -115,5 +122,3 @@ stopLinks.forEach(element => {
         event.preventDefault();
     })
 })
-
-//13. 
